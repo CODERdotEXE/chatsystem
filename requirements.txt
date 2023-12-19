@@ -5,5 +5,4 @@ PyPDF2
 tiktoken
 langchain[all]
 chromadb
-chroma
-chromadb = "^0.3.10"
+
