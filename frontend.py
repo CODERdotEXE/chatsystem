@@ -5,7 +5,7 @@ from backend import comp_process
 def frontend():
     # Streamlit UI
     st.set_page_config(page_title="Chat with multiple pdf files", layout="wide")
-    st.title("Chat with Multiple :red[PDF Files]!")
+    st.title("Hehe hehe")
     question = st.text_input("Ask Question Below: ")
 
     with st.sidebar:
