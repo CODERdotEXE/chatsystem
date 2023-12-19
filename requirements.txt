@@ -4,3 +4,5 @@ langchain
 PyPDF2
 tiktoken
 langchain[all]
+chromadb
+chroma
