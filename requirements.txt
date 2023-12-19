@@ -1,0 +1,6 @@
+streamlit
+openai
+langchain
+PyPDF2
+tiktoken
+langchain[all]
