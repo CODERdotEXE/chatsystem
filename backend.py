@@ -24,7 +24,7 @@ def comp_process(apikey, pdfs, question):
     chunks = text_splitter.split_text(text=text)
 
     embeddings = OpenAIEmbeddings(openai_api_key=apikey)
-    docsearch = chroma.from_texts(chunks, embedding=embeddings).as_retriever()
+    docsearch = chroma.afrom_texts(chunks, embedding=embeddings).as_retriever()
 
     if question:
         docs = docsearch.get_relevant_documents(question)
