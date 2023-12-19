@@ -9,7 +9,6 @@ def frontend():
     question = st.text_input("Ask Question Below: ")
 
     with st.sidebar:
-        st.image("pdf.png")
         api_key = st.text_input("Enter apikey", placeholder="Enter OpenAI Key", type="password")
 
         st.subheader("Upload PDFs here")
