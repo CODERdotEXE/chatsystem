@@ -1,7 +1,7 @@
 import os
 from langchain.document_loaders import UnstructuredPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Chroma
+from langchain.vectorstores import chroma
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
@@ -24,7 +24,7 @@ def comp_process(apikey, pdfs, question):
     chunks = text_splitter.split_text(text=text)
 
     embeddings = OpenAIEmbeddings(openai_api_key=apikey)
-    docsearch = Chroma.from_texts(chunks, embedding=embeddings).as_retriever()
+    docsearch = chroma.from_texts(chunks, embedding=embeddings).as_retriever()
 
     if question:
         docs = docsearch.get_relevant_documents(question)
